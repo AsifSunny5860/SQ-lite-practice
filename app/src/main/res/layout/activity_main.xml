@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="650dp">
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll2"
+        android:layout_below="@id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:weightSum="1"
+        >
+
+        <Button
+            android:id="@+id/dashboardbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:text="Dashoboard"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:drawableEnd="@drawable/dash"
+            android:textColor="#000"
+            android:background="#fff"
+            android:drawableRight="@drawable/dash"
+            tools:ignore="ButtonStyle">
+
+        </Button>
+
+        <Button
+            android:id="@+id/expensebtn"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/expense"
+            android:layout_weight=".5"
+            android:background="#fff"
+            android:layout_width="wrap_content"
+            android:textColor="#000"
+            android:textAllCaps="false"
+            android:text="expense"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/expense"
+            tools:ignore="ButtonStyle">
+
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>

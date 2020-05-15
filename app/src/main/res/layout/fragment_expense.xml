@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#000"
+            app:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Expenses"
+            app:titleTextColor="#fff">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:layout_below="@id/my_toolbar"
+            android:id="@+id/choseTypeSpnex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center">
+
+        </com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+
+        <LinearLayout
+            android:layout_below="@id/choseTypeSpnex"
+            android:id="@+id/linoutex"
+            android:layout_marginTop="20dp"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edittextex"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="@string/from_date"
+                android:textColorHint="#000"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/calender"
+                android:gravity="center_vertical"
+                android:textColor="#000"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:layout_marginEnd="10dp"
+                android:drawableEnd="@drawable/calender" />
+
+            <EditText
+                android:id="@+id/edittextex2"
+                android:focusable="false"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:hint="@string/to_date"
+                android:textColorHint="#000"
+                android:drawableRight="@drawable/calender"
+                android:drawableEnd="@drawable/calender"
+                tools:ignore="TextFields"
+                android:layout_marginEnd="10dp"
+                android:importantForAutofill="no" />
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/linoutex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/recyclerid"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_below="@id/recyclerid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fabbutton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_add_circle_black_24dp"
+            app:fabSize="normal"
+            app:elevation="6dp"
+            android:backgroundTint="#FF0084"
+            android:layout_alignParentEnd="true"
+            tools:targetApi="lollipop" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>

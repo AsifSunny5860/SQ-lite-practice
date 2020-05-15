@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Mysqlll</string>
+    <string name="title_pro">Dashoboard</string>
+    <string name="spinner_title">Select expense type</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="to_date">To date</string>
+    <string name="from_date">From date</string>
+    <string-array name="types_array">
+         <item>Select Expense Type</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Breakfast</item>
+        <item>Electricity Bill</item>
+        <item>Home Rent</item>
+        <item>Utility Bill</item>
+    </string-array>
+</resources>

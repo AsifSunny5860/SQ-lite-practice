@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExpenseActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#000"
+        app:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Add Expense"
+        app:titleTextColor="#fff">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Spinner
+        android:id="@+id/my_spinner"
+        android:layout_below="@id/my_toolbar"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:elevation="@dimen/cardview_default_elevation"
+        android:gravity="end"
+        tools:ignore="PrivateResource">
+    </Spinner>
+
+    <EditText
+        android:layout_below="@id/my_spinner"
+        android:id="@+id/edittextone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="Enter expense amount"
+        android:inputType="number">
+
+    </EditText>
+
+    <EditText
+        android:layout_below="@id/edittextone"
+        android:id="@+id/edittexttwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="Enter expense date"
+        android:drawableRight="@drawable/calender">
+
+    </EditText>
+
+    <EditText
+        android:layout_below="@id/edittexttwo"
+        android:id="@+id/edittextthree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="Enter expense date"
+        android:drawableRight="@drawable/ic_access_time_black_24dp">
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_below="@id/edittextthree"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:id="@+id/imagebuttonID"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".3"
+            android:src="@drawable/unnamed">
+
+        </ImageView>
+        <Button
+            android:id="@+id/docbuttonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:text="Add Document(if any)"
+            android:textAllCaps="false"
+           android:layout_margin="10dp"
+            android:backgroundTint="#FF0084">
+
+        </Button>
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@id/ll1"
+        android:id="@+id/addbuttonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Add expense"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF0084"
+        android:textSize="20dp">
+
+    </Button>
+
+
+
+</RelativeLayout>
+

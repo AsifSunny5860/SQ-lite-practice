@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DashboardFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#000"
+            app:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Dashboard"
+            app:titleTextColor="#fff">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:layout_below="@id/my_toolbar"
+            android:id="@+id/choseTypeSpndb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center">
+
+        </com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+        <LinearLayout
+            android:layout_below="@id/choseTypeSpndb"
+            android:id="@+id/linoutdb"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edittextdb"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="From date"
+                android:textColorHint="#000"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/calender"
+                android:gravity="center_vertical"
+                android:textColor="#000"
+                android:importantForAutofill="no"
+                android:inputType="date">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edittextdb2"
+                android:focusable="false"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:hint="To date"
+                android:textColorHint="#000"
+                android:drawableRight="@drawable/calender">
+
+            </EditText>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewdb"
+            android:layout_below="@id/linoutdb"
+            android:layout_margin="30dp"
+            android:backgroundTint="#70B8F1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Expense 0.00 BDT"
+                android:textSize="50sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="#000">
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>
